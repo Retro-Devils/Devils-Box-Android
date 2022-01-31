@@ -15,4 +15,11 @@ curl blah blah blah placeholder blah blah
 - Download things from internet 
 - Download & Install Frontends(launchers)
 - Download & Install emu apps
-- Configure/Directories 
+- Configure/Optimize directories 
+
+
+# Last Update 
+
+January 31,2022
+
+Version 2.0 
