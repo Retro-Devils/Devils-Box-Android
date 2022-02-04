@@ -1,14 +1,14 @@
 # Devils-Box-Android
 
 # Setup 
-- Download annd Install Termux .
+- Download & Install Termux .
 - Enable unknown sources in settings 
 
 # Install 
 curl blah blah blah placeholder blah blah 
 
 # Usage 
--open terminal type 
+-open termux type 
    blah blah 
    
 # Features 
@@ -20,6 +20,13 @@ curl blah blah blah placeholder blah blah
 
 # Last Update 
 
-January 31,2022
+Feburary 2, 2022
 
 Version 2.0 
+
+
+# Notes 
+
+we build for everyone to enjoy . 
+
+want changes tell us 
