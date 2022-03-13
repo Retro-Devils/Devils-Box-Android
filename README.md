@@ -9,8 +9,8 @@ curl blah blah blah placeholder blah blah
 
 # Usage 
 -open termux type 
-   blah blah 
-   
+   bash ~/Devils-Box.sh
+
 # Features 
 - Download things from internet 
 - Download & Install Frontends(launchers)
