@@ -9,6 +9,7 @@ curl blah blah blah placeholder blah blah
 
 # Usage 
 -open termux type 
+
    bash ~/Devils-Box.sh
 
 # Features 
