@@ -42,17 +42,20 @@ echo -e "${GREEN}-------INSTALLING NECESSARY PACAGES NOW------"
 echo -e "----------------------------------------------"
 echo -e "${GREEN}-------THIS SHOULD TAKE AWHILE TO COMPLETE------"
 pkg install git wget jq rsync unzip whiptail binutils build-essential liblz4 libuv ninja -y
+sleep 1
 echo -e "----------------------------------------------"
 echo -e "${GREEN}------------INSTALLING DEVILS BOX------------"
 echo -e "----------------------------------------------"
 wget https://raw.githubusercontent.com/Retro-Devils/Devils-Box-Android/main/Devils-Box.sh ~/Devils-Box
 bash ~/Devils-Box.sh
+sleep 1
 echo -e "----------------------------------------------"
 echo -e "${GREEN}---------MAKING NECESSARY FOLDERS NOW---------"
 echo -e "----------------------------------------------"
 mkdir ~/Roms
 echo -e "----------------------------------------------"
-echo -e "----------------------------------------------"
+echo -e "--------DEVILS BOX INSTALL COMPLETE-----------"
+sleep 5
 fi
 
 if [[ $selected_option == "2" ]]
