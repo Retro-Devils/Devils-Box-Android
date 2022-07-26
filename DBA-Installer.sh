@@ -43,10 +43,11 @@ echo -e "----------------------------------------------"
 echo -e "${GREEN}-------THIS SHOULD TAKE AWHILE TO COMPLETE------"
 pkg install git wget jq rsync unzip whiptail binutils build-essential liblz4 libuv ninja -y
 sleep 1
+pkg install git wget jq rsync unzip whiptail binutils build-essential liblz4 libuv ninja -y
 echo -e "----------------------------------------------"
 echo -e "${GREEN}------------INSTALLING DEVILS BOX------------"
 echo -e "----------------------------------------------"
-mkdor /storage/emulated/0//Devils-Box
+mkdir /storage/emulated/0//Devils-Box
 wget https://raw.githubusercontent.com/Retro-Devils/Devils-Box-Android/main/Devils-Box.sh /storage/emulated/0//Devils-Box
 sleep 1
 echo -e "----------------------------------------------"
