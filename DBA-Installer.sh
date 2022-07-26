@@ -53,7 +53,8 @@ echo "------THIS IS A DOWNLOADER & TOOLBOX-------"
 echo "-----------THIS TIME FOR ANDROID-----------"
 echo "___________________________________________"
 echo "--Downloads to ~/Roms/systemname/--"
-echo "USAGE open termux type bash ~/Devils-Box.sh"
+echo "HOW TO USE "
+echo "Open termux type bash ~/Devils-Box.sh"
 fi
 
 
