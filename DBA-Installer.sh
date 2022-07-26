@@ -1,6 +1,4 @@
 #!/bin/sh
-#--------HOSTS------#
-HOST1="https://archive.org/download/the-devils-box-alt"
 
 #-------COLORS------#
 
@@ -39,22 +37,22 @@ cancel=main-menu
 
 if [[ $selected_option == "1" ]]
 then 
-echo "-------Installing git Package Now------"
-pkg install git
-echo "------Installing & Moving Devils Box------"
-git clone https://github.com/Retro-Devils/Devils-Box-Android
-mv /data/data/com.termux/files/home/Devils-Box-Android/Devils-Box.sh /data/data/com.termux/files/home/
+echo -e "-------Installing Necessary Packages Now------"
+pkg install git wget jq rsync unzip whiptail binutils build-essential liblz4 libuv ninja -y
+echo -e "------Installing Devils Box------"
+wget https://raw.githubusercontent.com/Retro-Devils/Devils-Box-Android/main/Devils-Box.sh ~/Devils-Box
 bash ~/Devils-Box.sh
-
+echo -e "-----Making Necessary Folders Now-------"
+mkdir ~/Roms
 fi
 
 if [[ $selected_option == "2" ]]
 then
-echo "----------Devils Box Android V2.0----------"
-echo "------THIS IS A DOWNLOADER & TOOLBOX.------"
+echo "----------Devils Box Android V1.00---------"
+echo "------THIS IS A DOWNLOADER & TOOLBOX-------"
 echo "-----------THIS TIME FOR ANDROID-----------"
 echo "___________________________________________"
-echo "--Downloads to storage/0/roms/systemname/--"
+echo "--Downloads to ~/Roms/systemname/--"
 echo "USAGE open termux type bash ~/Devils-Box.sh"
 fi
 
