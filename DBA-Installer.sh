@@ -48,7 +48,6 @@ echo -e "${GREEN}------------INSTALLING DEVILS BOX------------"
 echo -e "----------------------------------------------"
 mkdor /storage/emulated/0//Devils-Box
 wget https://raw.githubusercontent.com/Retro-Devils/Devils-Box-Android/main/Devils-Box.sh /storage/emulated/0//Devils-Box
-bash ~/Devils-Box.sh
 sleep 1
 echo -e "----------------------------------------------"
 echo -e "${GREEN}---------MAKING NECESSARY FOLDERS NOW---------"
@@ -71,6 +70,3 @@ echo -e "${RED}--DOWNLOADS ~/Roms/systemname/--"
 echo -e "----------------HOW TO USE--------------------"
 echo -e "----OPEN TERMUX TYPE bash ~/Devils-Box.sh-----"
 fi
-
-
-main-menu
