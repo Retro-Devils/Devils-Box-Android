@@ -73,4 +73,4 @@ echo -e "----OPEN TERMUX TYPE bash ~/Devils-Box.sh-----"
 fi
 
 
-
+main_menu
