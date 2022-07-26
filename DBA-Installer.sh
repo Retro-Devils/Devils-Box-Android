@@ -37,24 +37,35 @@ cancel=main-menu
 
 if [[ $selected_option == "1" ]]
 then 
-echo -e "-------Installing Necessary Packages Now------"
+echo -e "----------------------------------------------"
+echo -e "${GREEN}-------INSTALLING NECESSARY PACAGES NOW------"
+echo -e "----------------------------------------------"
+echo -e "${GREEN}-------THIS SHOULD TAKE AWHILE TO COMPLETE------"
 pkg install git wget jq rsync unzip whiptail binutils build-essential liblz4 libuv ninja -y
-echo -e "------Installing Devils Box------"
+echo -e "----------------------------------------------"
+echo -e "${GREEN}------------INSTALLING DEVILS BOX------------"
+echo -e "----------------------------------------------"
 wget https://raw.githubusercontent.com/Retro-Devils/Devils-Box-Android/main/Devils-Box.sh ~/Devils-Box
 bash ~/Devils-Box.sh
-echo -e "-----Making Necessary Folders Now-------"
+echo -e "----------------------------------------------"
+echo -e "${GREEN}---------MAKING NECESSARY FOLDERS NOW---------"
+echo -e "----------------------------------------------"
 mkdir ~/Roms
+echo -e "----------------------------------------------"
+echo -e "----------------------------------------------"
 fi
 
 if [[ $selected_option == "2" ]]
 then
-echo "----------Devils Box Android V1.00---------"
-echo "------THIS IS A DOWNLOADER & TOOLBOX-------"
-echo "-----------THIS TIME FOR ANDROID-----------"
-echo "___________________________________________"
-echo "--Downloads to ~/Roms/systemname/--"
-echo "HOW TO USE "
-echo "Open termux type bash ~/Devils-Box.sh"
+echo -e "----------------------------------------------"
+echo -e "${RED}------------Devils Box Android V1.00----------"
+echo -e "----------------------------------------------"
+echo -e "${RED}------THIS IS A DOWNLOADER & TOOLBOX----------"
+echo -e "${RED}-----------THIS TIME FOR ANDROID--------------"
+echo -e "----------------------------------------------"
+echo -e "${RED}--DOWNLOADS ~/Roms/systemname/--"
+echo -e "----------------HOW TO USE--------------------"
+echo -e "----OPEN TERMUX TYPE bash ~/Devils-Box.sh-----"
 fi
 
 
