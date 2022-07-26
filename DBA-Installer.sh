@@ -38,36 +38,40 @@ cancel=main-menu
 if [[ $selected_option == "1" ]]
 then 
 echo -e "----------------------------------------------"
-echo -e "${GREEN}-------INSTALLING NECESSARY PACAGES NOW------"
+echo -e "${GREEN}-------INSTALLING NECESSARY PACAGES NOW------${NONE}"
 echo -e "----------------------------------------------"
-echo -e "${GREEN}-------THIS SHOULD TAKE AWHILE TO COMPLETE------"
+echo -e "${GREEN}-------THIS SHOULD TAKE AWHILE TO COMPLETE------${NONE}"
+sleep 4
 pkg install git wget jq rsync unzip whiptail binutils build-essential liblz4 libuv ninja -y
 sleep 1
 pkg install git wget jq rsync unzip whiptail binutils build-essential liblz4 libuv ninja -y
+sleep 3
 echo -e "----------------------------------------------"
-echo -e "${GREEN}------------INSTALLING DEVILS BOX------------"
+echo -e "${GREEN}------------INSTALLING DEVILS BOX------------${NONE}"
 echo -e "----------------------------------------------"
 mkdir /storage/emulated/0//Devils-Box
 wget https://raw.githubusercontent.com/Retro-Devils/Devils-Box-Android/main/Devils-Box.sh /storage/emulated/0//Devils-Box
-sleep 1
+sleep 3
 echo -e "----------------------------------------------"
-echo -e "${GREEN}---------MAKING NECESSARY FOLDERS NOW---------"
+echo -e "${GREEN}---------MAKING NECESSARY FOLDERS NOW---------${NONE}"
 echo -e "----------------------------------------------"
-mkdir ~/Roms
+mkdir /storage/emulated/0/Roms
+sleep 3
 echo -e "----------------------------------------------"
-echo -e "--------DEVILS BOX INSTALL COMPLETE-----------"
-sleep 5
+echo -e "${GREEN}--------DEVILS BOX INSTALL COMPLETE-----------${NONE}"
+sleep 3
 fi
 
 if [[ $selected_option == "2" ]]
 then
 echo -e "----------------------------------------------"
-echo -e "${RED}------------Devils Box Android V1.00----------"
+echo -e "${RED}------------Devils Box Android V1.00----------${NONE}"
 echo -e "----------------------------------------------"
-echo -e "${RED}------THIS IS A DOWNLOADER & TOOLBOX----------"
-echo -e "${RED}-----------THIS TIME FOR ANDROID--------------"
+echo -e "${RED}------THIS IS A DOWNLOADER & TOOLBOX----------${NONE}"
 echo -e "----------------------------------------------"
-echo -e "${RED}--DOWNLOADS ~/Roms/systemname/--"
-echo -e "----------------HOW TO USE--------------------"
-echo -e "----OPEN TERMUX TYPE bash ~/Devils-Box.sh-----"
+echo -e "${RED}-----------THIS TIME FOR ANDROID--------------${NONE}"
+echo -e "----------------------------------------------"
+echo -e "${RED}---DOWNLOADS TOO /storage/emulated/0//Roms/---${NONE}"
+echo -e "${GREEN}----------------HOW TO USE--------------------${NONE}"
+echo -e "${GREEN}----OPEN TERMUX TYPE bash ~/Devils-Box.sh-----${NONE}"
 fi
