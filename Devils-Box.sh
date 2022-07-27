@@ -151,10 +151,15 @@ function credits() {
 echo -e "${RED}-------------------------------------"
 echo -e "----------DEVILS BOX CREDITS---------"
 echo -e "-------------------------------------"
+sleep 2 
 echo -e "----------PEGASUS INSTALLER ---------"
+sleep 2 
 echo -e "----------TERMUX --------------------"
+sleep 2 
 echo -e "----------THE RETRO DEVILS ----------"
+sleep 2 
 echo -e "-------ANDROID DEVS ALL OF EM -------"
+sleep 2 
 echo -e "-------------------------------------${NONE}"
 sleep 2 
 }
