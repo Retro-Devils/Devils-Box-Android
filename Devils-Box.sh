@@ -93,7 +93,7 @@ while true; do
 function emu-tools() {
 while true; do
 	selected_option=$(dialog --title "Emu Installer " --radiolist "Please Select The Emulator(s) you wanna install." 20 40 15 \
-	"E1" "Pack" OFF \
+	"E1" "Pack" ON \
 	"E2" "Pack" OFF \
 	"E3" "Pack" OFF \
 	"E4" "Pack" OFF \
