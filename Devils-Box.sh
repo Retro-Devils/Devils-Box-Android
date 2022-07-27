@@ -1,6 +1,11 @@
 #!/bin/sh
+
 #--------HOSTS------#
 HOST1="https://archive.org/download/thing-box"
+HOST2="https://archive.org/download/bad-droid"
+#HOST3=
+#HOST4=
+#HOST5=
 
 #-------COLORS------#
 
@@ -363,7 +368,7 @@ if [[ $selected_option == "E7" ]]
 then
 echo -e "${GREEN}-----------DOWNLOADING AETHERSX2---------${NONE}"
 sleep 2
-wget https://archive.org/download/bad-droid/aethersx2-turnip-1447.apk ~/temp
+wget "${HOST2}"/aethersx2-turnip-1447.apk ~/temp
 xdg-open ~/Tools/aethersx2-turnip-1447.apk
 sleep 2
 rm -R ~/temp
