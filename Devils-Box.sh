@@ -29,7 +29,7 @@ while true; do
         "6" "Frontend Tools" OFF \
 	3>&1 1>&2 2>&3)
 	case $selected_option in
-		[1]* ) break;;
+		[1]* ) console-packs ;;
 		[2]* ) break;;
 		[3]* ) break;;
 		[4]* ) break;;
@@ -42,29 +42,6 @@ while true; do
 
 main-menu
 #--------SUB MENU FUNCTIONS-------#
-function artwork-packs() {
-while true; do
-	selected_option=$(dialog --title "Devils  Box " --radiolist "Move using your DPAD and select your options with the Y button. Press the A button to select." 20 40 15 \
-	"A1" "Pack" OFF \
-	"A2" "Pack" OFF \
-	"A3" "Pack" OFF \
-	"A4" "Pack" OFF \
-	"A5" "Pack" OFF \
-	"A6" "Pack" OFF \
-  "A7" "Pack" OFF \
-	3>&1 1>&2 2>&3)
-	case $selected_option in
-		[A1]* ) break;;
-		[A2]* ) break;;
-		[A3]* ) break;;
-		[A4]* ) break;;
-		[A5]* ) break;;
-		[A6]* ) break;;
-   [A7]* ) break;;
-		* ) echo "Select a option";;
-	esac
- done
-}
 function console-packs() {
 while true; do
 	selected_option=$(dialog --title "Devils  Box " --radiolist "Move using your DPAD and select your options with the Y button. Press the A button to select." 20 40 15 \
