@@ -18,7 +18,7 @@ clear
 
 function main-menu() {
 while true; do
-	selected_option=$(whiptail --title "Devils  Box " --radiolist "Move using your DPAD and select your options with the Y button. Press the A button to select." 20 40 15 \
+	selected_option=$(whiptail --title "Devils  Box Android V1.00" --radiolist "Move using DPAD & select with the Y button. Press the A button to Launch Selection" 20 40 15 \
         "1" "Install Devils Box " ON \
 	"2" "About Devils Box " OFF \
 	3>&1 1>&2 2>&3)
@@ -95,5 +95,6 @@ echo -e "----------------------------------------------"
 echo -e "${RED}---DOWNLOADS TOO /data/data/com.termux/Roms/---${NONE}"
 echo -e "----------------------------------------------"
 echo -e "${GREEN}----------------HOW TO USE--------------------${NONE}"
+echo -e "----------------------------------------------"
 echo -e "${GREEN}----OPEN TERMUX TYPE bash ~/Devils-Box.sh-----${NONE}"
 fi
