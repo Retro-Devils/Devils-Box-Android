@@ -290,7 +290,9 @@ fi
 
 if [[ $selected_option == "F1" ]]
 then
- echo 
+echo -e "-----------DOWNLOADING DAIJISHOU---------"
+wget
+xdg-open ~/.apk 
 fi
 
 if [[ $selected_option == "F2" ]]
