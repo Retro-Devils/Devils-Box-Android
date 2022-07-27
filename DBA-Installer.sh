@@ -63,8 +63,10 @@ if [ -f "~/Test/test.sh" ]; then
 	pkg update -y -F &>> ~/storage/shared/pegasus_installer_log.log && pkg upgrade -y -F
 	pkg install git wget jq rsync unzip whiptail binutils build-essential liblz4 libuv ninja -y
 else
-	echo -e "${GREEN}Download OK${NONE}"
-	echo "### Test Completed Everthings Fine"
+        echo -e "------------------------------------"
+	echo -e "${GREEN}PACKAGES INSTALLED SUCCESSFULLY${NONE}"
+	echo -e "------------------------------------"
+	sleep 4
 	
 	
 
@@ -84,6 +86,18 @@ sleep 3
 echo -e "----------------------------------------------"
 echo -e "${GREEN}--------DEVILS BOX INSTALL & SETUP COMPLETE-----------${NONE}"
 sleep 3
+echo -e "----------------------------------------------"
+echo -e "-----------RUNNING POST INSTALL---------------"
+echo -e "----------------------------------------------"
+rm -R ~/Test
+sleep 3
+echo -e "----------------------------------------------"
+echo -e "${RED}------------------WARNING---------------------${NONE}"
+echo -e "----------------------------------------------"
+echo -e "${RED}-----------DO NOT UNINSTALL TERMUX------------${NONE}"
+echo -e "----------------------------------------------"
+echo -e "-------ROMS ARE DOWNLOADED TO ITS FOLDER------"
+sleep 5
 fi
 
 if [[ $selected_option == "2" ]]
