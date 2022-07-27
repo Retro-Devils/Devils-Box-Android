@@ -7,8 +7,9 @@
 - Enable unknown sources in settings 
 
 # Install 
-/bin/bash -c "$(curl -fsSL https://bit.ly/DBA-Installer)"
-
+ 
+ /bin/bash -c "$(curl -fsSL https://bit.ly/DBA-Installer)"
+ 
 # Usage 
 -open termux type 
 
