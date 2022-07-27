@@ -30,7 +30,7 @@ while true; do
 	3>&1 1>&2 2>&3)
 	case $selected_option in
 		[1]* ) break;;
-		[2]* console-packs ;;
+		[2] console-packs ;;
 		[3]* ) break;;
 		[4]* ) break;;
 		[5]* ) break;;
