@@ -21,13 +21,15 @@ clear
 function main-menu() {
 while true; do
 	selected_option=$(whiptail --title "Devils  Box " --radiolist "Move using your DPAD and select your options with the Y button. Press the A button to select." 20 40 15 \
-	"1" "Console Packs" ON \
-	"2" "Hacked Packs" OFF \
-	"3" "Emulator Tools" OFF \
-        "4" "Frontend Tools" OFF \
+	"1" "----Downloaders----" OFF\
+	"2" "Console Packs" ON \
+	"3" "Hacks Packs" OFF \
+	"4" "-------Tools------" OFF \
+        "5" "Frontend Tools" OFF \
+	"6" "Emulator Tools" OFF \
 	3>&1 1>&2 2>&3)
 	case $selected_option in
-		[1]* ) console-packs;;
+		[1]* ) break;;
 		[2]* ) break;;
 		[3]* ) break;;
 		[4]* ) break;;
@@ -140,71 +142,28 @@ fi
 
 if [[ $selected_option == "2" ]]
 then
-	artwork-packs
+console-packs
 fi
 
 if [[ $selected_option == "3" ]]
 then
-	console-packs
+hacked-packs
 fi
 
 if [[ $selected_option == "4" ]]
 then
-	 hacked-packs
+main-menu 
 fi
 
 if [[ $selected_option == "5" ]]
 then 
-echo 
+frontend-tools
 fi
 
 if [[ $selected_option == "6" ]]
 then
 	emu-tools 
 fi
-
-if [[ $selected_option == "7" ]]
-then
-	frontend-tools
-fi
-
-#-----------Artwork Packs---------#
-
-if [[ $selected_option == "A1" ]]
-then
- echo "BLAH BLAH FUCKING BLAH"
-fi
-
-if [[ $selected_option == "A2" ]]
-then
- echo
-fi
-
-if [[ $selected_option == "A3" ]]
-then
- echo
-fi
-
-if [[ $selected_option == "A4" ]]
-then
- echo
-fi
-
-if [[ $selected_option == "A5" ]]
-then
- echo
-fi
-
-if [[ $selected_option == "A6" ]]
-then
- echo
-fi
-
-if [[ $selected_option == "A7" ]]
-then
- echo
-fi
-
 
 #-----------Console Packs---------#
 
