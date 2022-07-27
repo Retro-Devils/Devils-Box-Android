@@ -46,14 +46,14 @@ main-menu
 #--------SUB MENU FUNCTIONS-------#
 function console-packs() {
 while true; do
-	selected_option=$(dialog --title "Devils  Box " --radiolist "Select your options Console(s) with Space/Click. Press Enter/Click to confirm." 20 40 15 \
-	"C1" "Atari 5200 Pack" ON \
-	"C2" "Atari 7800 Pack" OFF \
-	"C3" "Gamegear Pack" OFF \
-	"C4" "Mastersystem Pack" OFF \
-	"C5" " Megadrive Pack" OFF \
-	"C6" " Pack" OFF \
-  "C7" " Pack" OFF \
+	selected_option=$(dialog --title "Devils  Box " --radiolist "Select your options Console(s) with Space/Click. Press Enter/Click to confirm." 25 45 20 \
+	"C1" "--Atari 5200 Pack----928KB       81 GAMES" ON \
+	"C2" "--Atari 7800 Pack------2MB       54 GAMES" OFF \
+	"C3" "--Gamegear Pack-------42MB      249 GAMES" OFF \
+	"C4" "--Mastersystem Pack---35MB      280 GAMES" OFF \
+	"C5" "--Megadrive Pack-----409MB      561 GAMES" OFF \
+	"C6" "--NES Pack-----------100MB      869 GAMES" OFF \
+        "C7" "--SNESPack-----------508MB      603 GAMES" OFF \
 	3>&1 1>&2 2>&3)
 	case $selected_option in
 		[C1]* ) break;;
