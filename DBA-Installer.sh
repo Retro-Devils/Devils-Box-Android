@@ -64,6 +64,9 @@ echo "### Termux Mirrors down"
 else
 	echo -e "${GREEN}Download OK${NONE}"
 	echo "### Test Completed Everthings Fine"
+
+fi
+
 echo -e "----------------------------------------------"
 echo -e "${GREEN}------------INSTALLING DEVILS BOX------------${NONE}"
 echo -e "----------------------------------------------"
