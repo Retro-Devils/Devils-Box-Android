@@ -385,7 +385,15 @@ fi
 
 if [[ $selected_option == "F3" ]]
 then
- echo
+echo -e "${GREEN}-----------DOWNLOADING PEGASUS---------${NONE}"
+echo -e "${GREEN}---------------VERSION # 1.6-----------${NONE}"
+echo -e "${RED}---------------------------------------${NONE}"
+echo -e "${GREEN}----IF YOU REALLY WANNA USE PEGASUS----${NONE}"
+echo -e "${GREEN}----CHECK OUT PEGASUS-INSTALLER.COM-----${NONE}"
+sleep 2
+wget   -q --show-progress https://github.com/mmatyas/pegasus-frontend/releases/download/alpha16/pegasus-fe_alpha16_android.apk -P ~/temp
+xdg-open ~/temp/pegasus-fe_alpha16_android.apk
+rm -R ~/temp
 fi
 
 
