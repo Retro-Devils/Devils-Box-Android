@@ -41,7 +41,7 @@ main-menu
 #--------SUB MENU FUNCTIONS-------#
 function console-packs() {
 while true; do
-	selected_option=$(dialog --title "Devils  Box " --radiolist "Move using your DPAD and select your options with the Y button. Press the A button to select." 20 40 15 \
+	selected_option=$(dialog --title "Devils  Box " --radiolist "Select your options Console(s) with Space/Click. Press Enter/Click to confirm." 20 40 15 \
 	"C1" "Atari 5200 Pack" ON \
 	"C2" "Atari 7800 Pack" OFF \
 	"C3" "Gamegear Pack" OFF \
@@ -64,7 +64,7 @@ while true; do
 }
 function hacked-packs() {
 while true; do
-	selected_option=$(dialog --title "Devils  Box " --radiolist "Move using your DPAD and select your options with the Y button. Press the A button to select." 20 40 15 \
+	selected_option=$(dialog --title "Devils  Box " --radiolist "Select your Hack Packs with Space/Click. Press Enter/Click OK to confirm." 20 40 15 \
 	"H1" "Pack" OFF \
 	"H2" "Pack" OFF \
 	"H3" "Pack" OFF \
@@ -87,14 +87,14 @@ while true; do
 }
 function emu-tools() {
 while true; do
-	selected_option=$(dialog --title "Devils  Box " --radiolist "Move using your DPAD and select your options with the Y button. Press the A button to select." 20 40 15 \
+	selected_option=$(dialog --title "Emu Installer " --radiolist "Please Select The Emulator(s) you wanna install." 20 40 15 \
 	"E1" "Pack" OFF \
 	"E2" "Pack" OFF \
 	"E3" "Pack" OFF \
 	"E4" "Pack" OFF \
 	"E5" "Pack" OFF \
 	"E6" "Pack" OFF \
-        "E7" "Pack" OFF \
+        "E7" "--PS2 EMU--Aethersx2--Turnip" OFF \
 	3>&1 1>&2 2>&3)
 	case $selected_option in
 		[E1]* ) break;;
@@ -110,7 +110,7 @@ while true; do
 }
 function frontend-tools() {
 while true; do
-	selected_option=$(dialog --title "Devils  Box " --radiolist "Move using your DPAD and select your options with the Y button. Press the A button to select." 20 40 15 \
+	selected_option=$(dialog --title "Devils  Box " --radiolist "Select your options with Space/Click. Press Enter/Click to confirm." 20 40 15 \
 	"F1" "Pack" OFF \
 	"F2" "Pack" OFF \
 	"F3" "Pack" OFF \
@@ -253,12 +253,15 @@ fi
 
 if [[ $selected_option == "E1" ]]
 then
- echo 
+echo -e "-----------DOWNLOADING ---------"
+wget 
 fi
 
 if [[ $selected_option == "E2" ]]
 then
- echo
+echo -e "-----------DOWNLOADING ---------"
+wget https://archive.org/download/bad-droid/aethersx2-turnip-1447.apk ~/Tools
+xdg-open ~/Tools/aethersx2-turnip-1447.apk
 fi
 
 if [[ $selected_option == "E3" ]]
@@ -283,7 +286,8 @@ fi
 
 if [[ $selected_option == "E7" ]]
 then
- echo
+echo -e "-----------DOWNLOADING AETHERSX2---------"
+wget 
 fi
 
 #-----------Frontend Tools ---------#
