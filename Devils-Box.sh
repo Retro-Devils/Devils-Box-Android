@@ -369,9 +369,23 @@ then
 echo -e "${GREEN}-----------DOWNLOADING AETHERSX2---------${NONE}"
 sleep 2
 wget "${HOST2}"/aethersx2-turnip-1447.apk ~/temp
-xdg-open ~/Tools/aethersx2-turnip-1447.apk
+xdg-open ~/temp/aethersx2-turnip-1447.apk
 sleep 2
 rm -R ~/temp
+fi
+
+if [[ $selected_option == "E8" ]]
+then
+echo -e "${GREEN}-----------DOWNLOADING RETROARCH---------${NONE}"
+wget ~/temp
+xdg-open ~/temp/
+sleep 2
+rm -R ~/temp
+echo -e "${GREEN}-----------LAUNCHING RETROARCH---------${NONE}"
+echo -e "${GREEN}---------------------------------------${NONE}"
+echo -e "${GREEN}-TAKE THE TIMS TO SETUP CONTROLLER NOW-${NONE}"
+sleep 3
+launch -a Retroarch
 fi
 
 #-----------Frontend Tools ---------#
