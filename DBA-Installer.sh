@@ -93,6 +93,7 @@ echo -e "----------------------------------------------"
 echo -e "${RED}-----------THIS TIME FOR ANDROID--------------${NONE}"
 echo -e "----------------------------------------------"
 echo -e "${RED}---DOWNLOADS TOO /data/data/com.termux/Roms/---${NONE}"
+echo -e "----------------------------------------------"
 echo -e "${GREEN}----------------HOW TO USE--------------------${NONE}"
 echo -e "${GREEN}----OPEN TERMUX TYPE bash ~/Devils-Box.sh-----${NONE}"
 fi
