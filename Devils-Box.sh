@@ -42,10 +42,10 @@ main-menu
 function console-packs() {
 while true; do
 	selected_option=$(dialog --title "Devils  Box " --radiolist "Move using your DPAD and select your options with the Y button. Press the A button to select." 20 40 15 \
-	"C1" " Pack" ON \
-	"C2" " Pack" OFF \
-	"C3" " Pack" OFF \
-	"C4" " Pack" OFF \
+	"C1" "Atari 5200 Pack" ON \
+	"C2" "Atari 7800 Pack" OFF \
+	"C3" "Gamegear Pack" OFF \
+	"C4" "Mastersystem Pack" OFF \
 	"C5" " Pack" OFF \
 	"C6" " Pack" OFF \
   "C7" " Pack" OFF \
@@ -57,7 +57,7 @@ while true; do
 		[C4]* ) break;;
 		[C5]* ) break;;
 		[C6]* ) break;;
-   [C7]* ) break;;
+                [C7]* ) break;;
 		* ) echo "Select a option";;
 	esac
  done
@@ -71,7 +71,7 @@ while true; do
 	"H4" "Pack" OFF \
 	"H5" "Pack" OFF \
 	"H6" "Pack" OFF \
-  "H7" "Pack" OFF \
+        "H7" "Pack" OFF \
 	3>&1 1>&2 2>&3)
 	case $selected_option in
 		[H1]* ) break;;
@@ -94,7 +94,7 @@ while true; do
 	"E4" "Pack" OFF \
 	"E5" "Pack" OFF \
 	"E6" "Pack" OFF \
-  "E7" "Pack" OFF \
+        "E7" "Pack" OFF \
 	3>&1 1>&2 2>&3)
 	case $selected_option in
 		[E1]* ) break;;
@@ -169,26 +169,34 @@ fi
 
 if [[ $selected_option == "C1" ]]
 then
-mkdir ~/Roms/amiga
-wget "${HOST1}"/Retro-Devils-gb.7z ~/Roms/gb/
-unzip ~/Roms/gb/Retro-Devils-gb.7z
-rm ~/Roms/gb/Retro-Devils-gb.7z
+wget "${HOST1}"/Retro-Devils-Atari5200.7z ~/Roms/
+unzip ~/Roms/Retro-Devils-Atari5200.7z
+rm ~/Roms/gb/Retro-Devils-Atari5200.7z
 clear
 fi
 
 if [[ $selected_option == "C2" ]]
 then
- echo
+wget "${HOST1}"/Retro-Devils-Atari7800.7z ~/Roms/
+unzip ~/Roms/Retro-Devils-Atari7800.7z
+rm ~/Roms/Retro-Devils-Atari7800.7z
+clear
 fi
 
 if [[ $selected_option == "C3" ]]
 then
- echo
+wget "${HOST1}"/Retro-Devils-GameGear.7z ~/Roms/
+unzip ~/Roms/Retro-Devils-GameGear.7z
+rm ~/Roms/Retro-Devils-GameGear.7z
+clear
 fi
 
 if [[ $selected_option == "C4" ]]
 then
- echo
+wget "${HOST1}"/Retro-Devils-Mastersystem.7z ~/Roms/
+unzip ~/Roms/Retro-Devils-Mastersystem.7z
+rm ~/Roms/Retro-Devils-Mastersystem.7z
+clear
 fi
 
 if [[ $selected_option == "C6" ]]
