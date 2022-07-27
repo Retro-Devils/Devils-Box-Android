@@ -53,7 +53,7 @@ sleep 3
 wget https://raw.githubusercontent.com/Retro-Devils/Devils-Box-Android/main/test.txt ~/Test/
 
 if [ -f "~/Test/test.sh" ]; then
-echo "### Termux Mirrors down"
+.       echo "### Termux Mirrors down"
 	echo -e "${RED}ERROR${NONE}"
 	echo -e "It seems Termux repositories are down. Let's fix it"
 	echo -e "When you press the ${RED}A button${NONE} selector will open. In the first screen ${BOLD}select all three options with the ${GREEN}Y button${NONE} and then Accept using the ${RED}A button${NONE}${NONE}"
