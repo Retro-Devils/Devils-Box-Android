@@ -19,12 +19,14 @@ clear
 function main-menu() {
 while true; do
 	selected_option=$(whiptail --title "Devils  Box Android V1.00" --radiolist "Move using DPAD & select with the Y button. Press the A button to Launch Selection" 20 40 15 \
-        "1" "Install Devils Box " ON \
-	"2" "About Devils Box " OFF \
+        "1" "About Devils Box " ON \
+	"2" "Install Devils Box " OFF \
+	"3" "Update Devils Box " OFF \
 	3>&1 1>&2 2>&3)
 	case $selected_option in
 		[1]* ) break;;
 		[2]* ) break;;
+		[3]* ) break;;
 		* ) echo "Select a option";;
 	esac
  done
@@ -36,6 +38,22 @@ main-menu
 cancel=main-menu
 
 if [[ $selected_option == "1" ]]
+then
+echo -e "----------------------------------------------"
+echo -e "${RED}------------Devils Box Android V1.00----------${NONE}"
+echo -e "----------------------------------------------"
+echo -e "${RED}------THIS IS A DOWNLOADER & TOOLBOX----------${NONE}"
+echo -e "----------------------------------------------"
+echo -e "${RED}-----------THIS TIME FOR ANDROID--------------${NONE}"
+echo -e "----------------------------------------------"
+echo -e "${RED}---DOWNLOADS TOO /data/data/com.termux/Roms/---${NONE}"
+echo -e "----------------------------------------------"
+echo -e "${GREEN}----------------HOW TO USE--------------------${NONE}"
+echo -e "----------------------------------------------"
+echo -e "${GREEN}----OPEN TERMUX TYPE bash ~/Devils-Box.sh-----${NONE}"
+fi
+
+if [[ $selected_option == "2" ]]
 then 
 echo -e "----------------------------------------------"
 echo -e "${GREEN}-------INSTALLING NECESSARY PACAGES NOW------${NONE}"
@@ -53,7 +71,7 @@ sleep 3
 wget https://raw.githubusercontent.com/Retro-Devils/Devils-Box-Android/main/test.txt ~/Test/
 
 if [ -f "~/Test/test.sh" ]; then
-.       echo "### Termux Mirrors down"
+        echo "### Termux Mirrors down"
 	echo -e "${RED}ERROR${NONE}"
 	echo -e "It seems Termux repositories are down. Let's fix it"
 	echo -e "When you press the ${RED}A button${NONE} selector will open. In the first screen ${BOLD}select all three options with the ${GREEN}Y button${NONE} and then Accept using the ${RED}A button${NONE}${NONE}"
@@ -75,8 +93,7 @@ fi
 echo -e "----------------------------------------------"
 echo -e "${GREEN}------------INSTALLING DEVILS BOX------------${NONE}"
 echo -e "----------------------------------------------"
-mkdir ~/Devils-Box
-wget https://raw.githubusercontent.com/Retro-Devils/Devils-Box-Android/main/Devils-Box.sh ~/Devils-Box
+wget https://raw.githubusercontent.com/Retro-Devils/Devils-Box-Android/main/Devils-Box.sh ~/
 sleep 3
 echo -e "----------------------------------------------"
 echo -e "${GREEN}---------MAKING NECESSARY FOLDERS NOW---------${NONE}"
@@ -100,18 +117,20 @@ echo -e "-------ROMS ARE DOWNLOADED TO ITS FOLDER------"
 sleep 5
 fi
 
-if [[ $selected_option == "2" ]]
+
+if [[ $selected_option == "3" ]]
 then
-echo -e "----------------------------------------------"
-echo -e "${RED}------------Devils Box Android V1.00----------${NONE}"
-echo -e "----------------------------------------------"
-echo -e "${RED}------THIS IS A DOWNLOADER & TOOLBOX----------${NONE}"
-echo -e "----------------------------------------------"
-echo -e "${RED}-----------THIS TIME FOR ANDROID--------------${NONE}"
-echo -e "----------------------------------------------"
-echo -e "${RED}---DOWNLOADS TOO /data/data/com.termux/Roms/---${NONE}"
-echo -e "----------------------------------------------"
-echo -e "${GREEN}----------------HOW TO USE--------------------${NONE}"
-echo -e "----------------------------------------------"
-echo -e "${GREEN}----OPEN TERMUX TYPE bash ~/Devils-Box.sh-----${NONE}"
+if [ -f "~/Devils-Box.sh" ]; then
+        echo -e "------------------------------------"
+	echo -e "${GREEN}REMOVING OLD VERSION${NONE}"
+	echo -e "------------------------------------"
+	sleep 2
+	rm -R ~/Devils-Box.sh
+	sleep 2
+else
+        echo -e "------------------------------------"
+	echo -e "${GREEN}INSTALLING NEW VERSION${NONE}"
+	echo -e "------------------------------------"
+	sleep 2
+        wget https://raw.githubusercontent.com/Retro-Devils/Devils-Box-Android/main/Devils-Box.sh ~/Devils-Box
 fi
