@@ -20,7 +20,7 @@ clear
 
 function main-menu() {
 while true; do
-	selected_option=$(whiptail --title "Devils  Box " --radiolist "Move using your DPAD and select your options with the Y button. Press the A button to select." 20 40 15 \
+	selected_option=$(whiptail --title "Devils  Box " --radiolist "Select your options with Space/Click. Press Enter/Click to confirm." 20 40 15 \
 	"1" "----Downloaders----" OFF\
 	"2" "Console Packs" ON \
 	"3" "Hacks Packs" OFF \
