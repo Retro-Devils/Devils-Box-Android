@@ -5,7 +5,7 @@
 - Enable unknown sources in settings 
 
 # Install 
-curl blah blah blah placeholder blah blah 
+/bin/bash -c "$(curl -fsSL https://bit.ly/DBA-Installer)"
 
 # Usage 
 -open termux type 
@@ -21,9 +21,9 @@ curl blah blah blah placeholder blah blah
 
 # Last Update 
 
-Feburary 2, 2022
+July 27, 2022
 
-Version 2.0 
+Version 1.00 
 
 
 # Notes 
