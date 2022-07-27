@@ -1,6 +1,6 @@
 #!/bin/sh
 #--------HOSTS------#
-HOST1="https://archive.org/download/the-devils-box-alt"
+HOST1="https://archive.org/download/thing-box"
 
 #-------COLORS------#
 
@@ -22,12 +22,11 @@ function main-menu() {
 while true; do
 	selected_option=$(whiptail --title "Devils  Box " --radiolist "Move using your DPAD and select your options with the Y button. Press the A button to select." 20 40 15 \
         "1" "--Downloaders--" ON \
-	"2" "Artwork Packs" OFF \
-	"3" "Console Packs" OFF \
-	"4" "Hacked Packs" OFF \
-	"5" "---Tools---" OFF \
-	"6" "Emulator Tools" OFF \
-  "7" "Frontend Tools" OFF \
+	"2" "Console Packs" OFF \
+	"3" "Hacked Packs" OFF \
+	"4" "---Tools---" OFF \
+	"5" "Emulator Tools" OFF \
+        "6" "Frontend Tools" OFF \
 	3>&1 1>&2 2>&3)
 	case $selected_option in
 		[1]* ) break;;
@@ -36,7 +35,6 @@ while true; do
 		[4]* ) break;;
 		[5]* ) break;;
 		[6]* ) break;;
-   [7]* ) break;;
 		* ) echo "Select a option";;
 	esac
  done
@@ -240,7 +238,11 @@ fi
 
 if [[ $selected_option == "C1" ]]
 then
-"${HOST1}" /amiga/
+mkdir ~/Roms/amiga
+wget "${HOST1}"/Retro-Devils-gb.7z ~/Roms/gb/
+unzip ~/Roms/gb/Retro-Devils-gb.7z
+rm ~/Roms/gb/Retro-Devils-gb.7z
+clear
 fi
 
 if [[ $selected_option == "C2" ]]
