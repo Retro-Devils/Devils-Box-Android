@@ -103,7 +103,7 @@ while true; do
 		[E4]* ) break;;
 		[E5]* ) break;;
 		[E6]* ) break;;
-   [E7]* ) break;;
+                [E7]* ) break;;
 		* ) echo "Select a option";;
 	esac
  done
@@ -111,25 +111,34 @@ while true; do
 function frontend-tools() {
 while true; do
 	selected_option=$(dialog --title "Devils  Box " --radiolist "Select your options with Space/Click. Press Enter/Click to confirm." 20 40 15 \
-	"F1" "Pack" OFF \
-	"F2" "Pack" OFF \
-	"F3" "Pack" OFF \
-	"F4" "Pack" OFF \
-	"F5" "Pack" OFF \
-	"F6" "Pack" OFF \
-  "F7" "Pack" OFF \
+	"F1" "Daijishou" OFF \
+	"F2" "DIG" OFF \
+	"F3" "Pegasus" OFF \
 	3>&1 1>&2 2>&3)
 	case $selected_option in
 		[F1]* ) break;;
 		[F2]* ) break;;
 		[F3]* ) break;;
-		[F4]* ) break;;
-		[F5]* ) break;;
-		[F6]* ) break;;
-   [F7]* ) break;;
 		* ) echo "Select a option";;
 	esac
  done
+}
+
+function download-complete() {
+echo -e "--------------------------------"
+echo -e "${GREEN}------DOWNLOAD COMPLETE-------${NONE}"
+echo -e "--------------------------------"
+sleep 3
+}
+
+function download-error() {
+echo -e "--------------------------------"
+echo -e "${RED}------DOWNLOAD ERROR TRY AGAIN-------${NONE}"
+echo -e "--------------------------------"
+sleep 2
+echo -e "${RED}----------IF ERROR CONTINUES--------------"
+echo -e "------------CONTACT THE RETRO DEVILS---------"
+echo -e "-----------------------------------------${NONE}"
 }
 
 #--------CHOICES---------#
@@ -173,6 +182,11 @@ wget "${HOST1}"/Retro-Devils-Atari5200.7z ~/Roms/
 unzip ~/Roms/Retro-Devils-Atari5200.7z
 rm ~/Roms/gb/Retro-Devils-Atari5200.7z
 clear
+if [ -d ~/Roms/atari5200 ]; then
+download-complete
+else
+download-error
+fi
 fi
 
 if [[ $selected_option == "C2" ]]
@@ -181,6 +195,11 @@ wget "${HOST1}"/Retro-Devils-Atari7800.7z ~/Roms/
 unzip ~/Roms/Retro-Devils-Atari7800.7z
 rm ~/Roms/Retro-Devils-Atari7800.7z
 clear
+if [ -d ~/Roms/atari7800 ]; then
+download-complete
+else
+download-error
+fi
 fi
 
 if [[ $selected_option == "C3" ]]
@@ -189,6 +208,11 @@ wget "${HOST1}"/Retro-Devils-GameGear.7z ~/Roms/
 unzip ~/Roms/Retro-Devils-GameGear.7z
 rm ~/Roms/Retro-Devils-GameGear.7z
 clear
+if [ -d ~/Roms/gamegear ]; then
+download-complete
+else
+download-error
+fi
 fi
 
 if [[ $selected_option == "C4" ]]
@@ -197,6 +221,41 @@ wget "${HOST1}"/Retro-Devils-Mastersystem.7z ~/Roms/
 unzip ~/Roms/Retro-Devils-Mastersystem.7z
 rm ~/Roms/Retro-Devils-Mastersystem.7z
 clear
+if [ -d ~/Roms/mastersystem ]; then
+download-complete
+else
+download-error
+fi
+fi
+
+if [[ $selected_option == "C6" ]]
+then
+ echo
+fi
+
+if [[ $selected_option == "C7" ]]
+then
+ echo
+fi
+
+if [[ $selected_option == "C8" ]]
+then
+ echo
+fi
+
+if [[ $selected_option == "C6" ]]
+then
+ echo
+fi
+
+if [[ $selected_option == "C7" ]]
+then
+ echo
+fi
+
+if [[ $selected_option == "C8" ]]
+then
+ echo
 fi
 
 if [[ $selected_option == "C6" ]]
@@ -249,7 +308,7 @@ if [[ $selected_option == "H7" ]]
 then
  echo
 fi
-#-----------Artwork Packs---------#
+#-----------Emus---------#
 
 if [[ $selected_option == "E1" ]]
 then
@@ -259,9 +318,7 @@ fi
 
 if [[ $selected_option == "E2" ]]
 then
-echo -e "-----------DOWNLOADING ---------"
-wget https://archive.org/download/bad-droid/aethersx2-turnip-1447.apk ~/Tools
-xdg-open ~/Tools/aethersx2-turnip-1447.apk
+ echo
 fi
 
 if [[ $selected_option == "E3" ]]
@@ -286,15 +343,17 @@ fi
 
 if [[ $selected_option == "E7" ]]
 then
-echo -e "-----------DOWNLOADING AETHERSX2---------"
-wget 
+echo -e "${GREEN}-----------DOWNLOADING AETHERSX2---------${NONE}"
+sleep 2
+wget https://archive.org/download/bad-droid/aethersx2-turnip-1447.apk ~/Tools
+xdg-open ~/Tools/aethersx2-turnip-1447.apk
 fi
 
 #-----------Frontend Tools ---------#
 
 if [[ $selected_option == "F1" ]]
 then
-echo -e "-----------DOWNLOADING DAIJISHOU---------"
+echo -e "${GREEN}-----------DOWNLOADING DAIJISHOU---------${NONE}"
 wget
 xdg-open ~/.apk 
 fi
@@ -305,26 +364,6 @@ then
 fi
 
 if [[ $selected_option == "F3" ]]
-then
- echo
-fi
-
-if [[ $selected_option == "F4" ]]
-then
- echo
-fi
-
-if [[ $selected_option == "F5" ]]
-then
- echo
-fi
-
-if [[ $selected_option == "F6" ]]
-then
- echo
-fi
-
-if [[ $selected_option == "F7" ]]
 then
  echo
 fi
