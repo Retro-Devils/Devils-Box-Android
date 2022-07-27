@@ -1,3 +1,4 @@
+![Screenshot_20220726-204359_Termux](https://user-images.githubusercontent.com/88673522/181136422-306b2f2a-4029-4c74-9c73-f85f4f6e394e.jpg)
 # Devils-Box-Android 
 
 # not complete but close 
@@ -20,8 +21,6 @@
 - Download & Install emu apps
 - Configure/Optimize directories 
 
-# Pics Previews
-https://raw.githubusercontent.com/Retro-Devils/Devils-Box-Android/main/Screenshot_20220726-204359_Termux.jpg
 
 # Last Update 
 
