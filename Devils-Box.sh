@@ -365,6 +365,7 @@ echo -e "${GREEN}-----------DOWNLOADING AETHERSX2---------${NONE}"
 sleep 2
 wget https://archive.org/download/bad-droid/aethersx2-turnip-1447.apk ~/temp
 xdg-open ~/Tools/aethersx2-turnip-1447.apk
+sleep 2
 rm -R ~/temp
 fi
 
@@ -376,6 +377,7 @@ echo -e "${GREEN}-----------DOWNLOADING DAIJISHOU---------${NONE}"
 echo -e "${GREEN}--------------VERSION # 2.33-------------${NONE}"
 wget https://github.com/magneticchen/Daijishou/releases/download/v1.2.49/233.apk ~/temp
 xdg-open ~/temp/233.apk
+sleep 2
 rm -R ~/temp
 fi
 
@@ -394,6 +396,7 @@ echo -e "${GREEN}----CHECK OUT PEGASUS-INSTALLER.COM-----${NONE}"
 sleep 2
 wget   -q --show-progress https://github.com/mmatyas/pegasus-frontend/releases/download/alpha16/pegasus-fe_alpha16_android.apk -P ~/temp
 xdg-open ~/temp/pegasus-fe_alpha16_android.apk
+sleep 
 rm -R ~/temp
 fi
 
