@@ -49,13 +49,13 @@ sleep 3
 echo -e "----------------------------------------------"
 echo -e "${GREEN}------------INSTALLING DEVILS BOX------------${NONE}"
 echo -e "----------------------------------------------"
-mkdir /storage/emulated/0//Devils-Box
-wget https://raw.githubusercontent.com/Retro-Devils/Devils-Box-Android/main/Devils-Box.sh /storage/emulated/0//Devils-Box
+mkdir ~/Devils-Box
+wget https://raw.githubusercontent.com/Retro-Devils/Devils-Box-Android/main/Devils-Box.sh ~/Devils-Box
 sleep 3
 echo -e "----------------------------------------------"
 echo -e "${GREEN}---------MAKING NECESSARY FOLDERS NOW---------${NONE}"
 echo -e "----------------------------------------------"
-mkdir /storage/emulated/0/Roms
+mkdir ~/Roms
 sleep 3
 echo -e "----------------------------------------------"
 echo -e "${GREEN}--------DEVILS BOX INSTALL COMPLETE-----------${NONE}"
@@ -71,7 +71,7 @@ echo -e "${RED}------THIS IS A DOWNLOADER & TOOLBOX----------${NONE}"
 echo -e "----------------------------------------------"
 echo -e "${RED}-----------THIS TIME FOR ANDROID--------------${NONE}"
 echo -e "----------------------------------------------"
-echo -e "${RED}---DOWNLOADS TOO /storage/emulated/0//Roms/---${NONE}"
+echo -e "${RED}---DOWNLOADS TOO /data/data/com.termux/Roms/---${NONE}"
 echo -e "${GREEN}----------------HOW TO USE--------------------${NONE}"
 echo -e "${GREEN}----OPEN TERMUX TYPE bash ~/Devils-Box.sh-----${NONE}"
 fi
