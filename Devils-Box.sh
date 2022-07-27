@@ -27,7 +27,7 @@ while true; do
         "4" "Frontend Tools" OFF \
 	3>&1 1>&2 2>&3)
 	case $selected_option in
-		[1]* ) break;;
+		[1]* ) console-packs;;
 		[2]* ) break;;
 		[3]* ) break;;
 		[4]* ) break;;
