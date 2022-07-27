@@ -42,10 +42,31 @@ echo -e "${GREEN}-------INSTALLING NECESSARY PACAGES NOW------${NONE}"
 echo -e "----------------------------------------------"
 echo -e "${GREEN}-------THIS SHOULD TAKE AWHILE TO COMPLETE------${NONE}"
 sleep 4
-pkg install git wget jq rsync unzip whiptail binutils build-essential liblz4 libuv ninja -y
-sleep 1
+export DEBIAN_FRONTEND=noninteractive
+apt-get update && 
+	apt-get -o "Dpkg::Options::=--force-confold"  upgrade -q -y --force-yes &&
+	apt-get -o "Dpkg::Options::=--force-confold"  dist-upgrade -q -y --force-yes
+pkg autoclean
+pkg update -y && pkg upgrade -y
 pkg install git wget jq rsync unzip whiptail binutils build-essential liblz4 libuv ninja -y
 sleep 3
+wget https://raw.githubusercontent.com/Retro-Devils/Devils-Box-Android/main/test.txt ~/Test/
+if [ -f "~/Test/test.sh" ]; then
+	echo -e "${GREEN}Download OK${NONE}"
+	echo "### Repo cloned "  &>> ~/storage/shared/pegasus_installer_log.log
+else
+	echo "### Termux Mirrors down"  &>> ~/storage/shared/pegasus_installer_log.log
+	echo -e "${RED}ERROR${NONE}"
+	echo -e "It seems Termux repositories are down. Let's fix it"
+	echo -e "When you press the ${RED}A button${NONE} selector will open. In the first screen ${BOLD}select all three options with the ${GREEN}Y button${NONE} and then Accept using the ${RED}A button${NONE}${NONE}"
+	echo -e "Then in the next screen select the first option and press the ${RED}A button${NONE}"
+	read pause
+	termux-change-repo
+	pkg update -y -F &>> ~/storage/shared/pegasus_installer_log.log && pkg upgrade -y -F
+	pkg install git wget jq rsync unzip whiptail binutils build-essential liblz4 libuv ninja -y
+	
+	
+fi
 echo -e "----------------------------------------------"
 echo -e "${GREEN}------------INSTALLING DEVILS BOX------------${NONE}"
 echo -e "----------------------------------------------"
@@ -58,7 +79,7 @@ echo -e "----------------------------------------------"
 mkdir ~/Roms
 sleep 3
 echo -e "----------------------------------------------"
-echo -e "${GREEN}--------DEVILS BOX INSTALL COMPLETE-----------${NONE}"
+echo -e "${GREEN}--------DEVILS BOX INSTALL & SETUP COMPLETE-----------${NONE}"
 sleep 3
 fi
 
