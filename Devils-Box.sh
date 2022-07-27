@@ -51,7 +51,7 @@ while true; do
 	"C2" "Atari 7800 Pack" OFF \
 	"C3" "Gamegear Pack" OFF \
 	"C4" "Mastersystem Pack" OFF \
-	"C5" " Pack" OFF \
+	"C5" " Megadrive Pack" OFF \
 	"C6" " Pack" OFF \
   "C7" " Pack" OFF \
 	3>&1 1>&2 2>&3)
@@ -256,6 +256,14 @@ download-error
 fi
 fi
 
+if [[ $selected_option == "C5" ]]
+then
+wget "${HOST1}"/Retro-Devils-Megadrive.7z ~/Roms/
+unzip ~/Roms/Retro-Devils-Megadrive.7z
+rm ~/Roms/Retro-Devils-Megadrive.7z
+clear
+fi
+
 if [[ $selected_option == "C6" ]]
 then
  echo
@@ -267,11 +275,6 @@ then
 fi
 
 if [[ $selected_option == "C8" ]]
-then
- echo
-fi
-
-if [[ $selected_option == "C6" ]]
 then
  echo
 fi
