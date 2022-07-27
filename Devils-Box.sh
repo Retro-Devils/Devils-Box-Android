@@ -142,6 +142,18 @@ echo -e "-----------------------------------------${NONE}"
 sleep 2 
 }
 
+function credits() {
+echo -e "${RED}-------------------------------------"
+echo -e "----------DEVILS BOX CREDITS---------"
+echo -e "-------------------------------------"
+echo -e "----------PEGASUS INSTALLER ---------"
+echo -e "----------TERMUX --------------------"
+echo -e "----------THE RETRO DEVILS ----------"
+echo -e "-------ANDROID DEVS ALL OF EM -------"
+echo -e "-------------------------------------${NONE}"
+sleep 2 
+}
+
 #--------CHOICES---------#
 cancel=main-menu
 
@@ -173,6 +185,11 @@ fi
 if [[ $selected_option == "6" ]]
 then
 	emu-tools 
+fi
+
+if [[ $selected_option == "7" ]]
+then
+	credits
 fi
 
 #-----------Console Packs---------#
@@ -355,8 +372,10 @@ fi
 if [[ $selected_option == "F1" ]]
 then
 echo -e "${GREEN}-----------DOWNLOADING DAIJISHOU---------${NONE}"
-wget
-xdg-open ~/.apk 
+echo -e "${GREEN}--------------VERSION # 2.33-------------${NONE}"
+wget https://github.com/magneticchen/Daijishou/releases/download/v1.2.49/233.apk ~/temp
+xdg-open ~/temp/233.apk
+rm -R ~/temp
 fi
 
 if [[ $selected_option == "F2" ]]
