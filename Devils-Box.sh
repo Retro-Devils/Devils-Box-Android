@@ -2,7 +2,7 @@
 
 #--------HOSTS------#
 HOST1="https://archive.org/download/thing-box"
-HOST2="https://archive.org/download/bad-droid"
+HOST2="https://archive.org/download/bad-droid/apks"
 #HOST3=
 #HOST4=
 #HOST5=
