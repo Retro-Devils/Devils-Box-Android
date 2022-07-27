@@ -139,6 +139,7 @@ sleep 2
 echo -e "${RED}----------IF ERROR CONTINUES--------------"
 echo -e "------------CONTACT THE RETRO DEVILS---------"
 echo -e "-----------------------------------------${NONE}"
+sleep 2 
 }
 
 #--------CHOICES---------#
