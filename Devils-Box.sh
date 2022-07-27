@@ -20,21 +20,17 @@ clear
 
 function main-menu() {
 while true; do
-	selected_option=$(whiptail --title "Devils  Box " --radiolist "Move using your DPAD and select your options with the Y button. Press the A button to select." 20 40 15 \
-        "1" "--Downloaders--" ON \
-	"2" "Console Packs" OFF \
-	"3" "Hacked Packs" OFF \
-	"4" "---Tools---" OFF \
-	"5" "Emulator Tools" OFF \
-        "6" "Frontend Tools" OFF \
+	selected_option=$(whiptail --title "Devils  Box " --radiolist "Move using your DPAD and select your options with the Y button. Press the A button to select." 20 40 15
+	"1" "Console Packs" OFF \
+	"2" "Hacked Packs" OFF \
+	"3" "Emulator Tools" OFF \
+        "4" "Frontend Tools" OFF \
 	3>&1 1>&2 2>&3)
 	case $selected_option in
 		[1]* ) break;;
-		[2] console-packs ;;
+		[2]* ) break;;
 		[3]* ) break;;
 		[4]* ) break;;
-		[5]* ) break;;
-		[6]* ) break;;
 		* ) echo "Select a option";;
 	esac
  done
