@@ -51,6 +51,7 @@ pkg update -y && pkg upgrade -y
 pkg install git wget jq rsync unzip whiptail binutils build-essential liblz4 libuv ninja -y
 sleep 3
 wget https://raw.githubusercontent.com/Retro-Devils/Devils-Box-Android/main/test.txt ~/Test/
+
 if [ -f "~/Test/test.sh" ]; then
 echo "### Termux Mirrors down"
 	echo -e "${RED}ERROR${NONE}"
@@ -64,6 +65,8 @@ echo "### Termux Mirrors down"
 else
 	echo -e "${GREEN}Download OK${NONE}"
 	echo "### Test Completed Everthings Fine"
+	
+	
 
 fi
 
