@@ -136,3 +136,4 @@ else
 	sleep 2
         wget https://raw.githubusercontent.com/Retro-Devils/Devils-Box-Android/main/Devils-Box.sh ~/Devils-Box
 fi
+fi
