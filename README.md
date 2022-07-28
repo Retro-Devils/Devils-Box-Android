@@ -2,8 +2,14 @@
 
 # not complete but close 
 
+# Features 
+- Download things from internet 
+- Download & Install Frontends(launchers)
+- Download & Install emu apps
+- Configure/Optimize directories.
+
 # Setup 
-- Download & Install Termux .
+- Download & Install Termux . uploading to archivw now
 - Enable unknown sources in settings 
 
 # Install 
@@ -15,25 +21,17 @@
 
    bash ~/Devils-Box.sh
 
-# Features 
-- Download things from internet 
-- Download & Install Frontends(launchers)
-- Download & Install emu apps
-- Configure/Optimize directories 
-
 # Previews
 
 ![Screenshot_20220726-204359_Termux](https://user-images.githubusercontent.com/88673522/181136422-306b2f2a-4029-4c74-9c73-f85f4f6e394e.jpg)
 
 # Last Update 
 
-July 27, 2022
+July 28, 2022
 
-Version 1.00 
+Version 1.01
 
 
 # Notes 
 
-we build for everyone to enjoy . 
-
-want changes tell us 
+We d*** Devils build for everyone to enjoy . If you want changes please tell us 
