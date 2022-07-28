@@ -39,19 +39,23 @@ cancel=main-menu
 
 if [[ $selected_option == "1" ]]
 then
+clear
 echo -e "----------------------------------------------"
 echo -e "${RED}------------Devils Box Android V1.00----------${NONE}"
+sleep 3 
 echo -e "----------------------------------------------"
 echo -e "${RED}------THIS IS A DOWNLOADER & TOOLBOX----------${NONE}"
 echo -e "----------------------------------------------"
 echo -e "${RED}-----------THIS TIME FOR ANDROID--------------${NONE}"
 echo -e "----------------------------------------------"
 echo -e "${RED}---DOWNLOADS TOO /data/data/com.termux/Roms/---${NONE}"
+sleep 3
 echo -e "----------------------------------------------"
 echo -e "${GREEN}----------------HOW TO USE--------------------${NONE}"
 echo -e "----------------------------------------------"
 echo -e "${GREEN}----OPEN TERMUX TYPE bash ~/Devils-Box.sh-----${NONE}"
-sleep 8
+sleep 5
+echo -e "${GREEN}------RETURNING TO INSTALLER MENU NOW---------${NONE}"
 main-menu
 fi
 
@@ -114,8 +118,12 @@ echo -e "${RED}------------------WARNING---------------------${NONE}"
 echo -e "----------------------------------------------"
 echo -e "${RED}-----------DO NOT UNINSTALL TERMUX------------${NONE}"
 echo -e "----------------------------------------------"
-echo -e "-------ROMS ARE DOWNLOADED TO ITS FOLDER------"
+echo -e "${RED}-------ROMS ARE DOWNLOADED TO ITS FOLDER------${NONE}"
 sleep 5
+echo -e "${GREEN}----------NOW LAUNCHING DEVILS BOX---------------${NONE}"
+echo -e "${GREEN}---------------WE HOPE YOU ENJOY-----------------${NONE}"
+sleep 2
+bash ~/Devils-Box.sh
 fi
 
 
