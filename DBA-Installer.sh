@@ -14,7 +14,6 @@ UNDERLINE='\033[4m'
 BLINK='\x1b[5m'
 
 clear
-termux-setup-storage
 #--------MAIN MENU FUNCTIONS--------#
 
 function main-menu() {
@@ -55,7 +54,9 @@ echo -e "${GREEN}----OPEN TERMUX TYPE bash ~/Devils-Box.sh-----${NONE}"
 fi
 
 if [[ $selected_option == "2" ]]
-then 
+then
+termux-setup-storage
+
 echo -e "----------------------------------------------"
 echo -e "${GREEN}-------INSTALLING NECESSARY PACAGES NOW------${NONE}"
 echo -e "----------------------------------------------"
