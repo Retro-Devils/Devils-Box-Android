@@ -14,6 +14,7 @@ UNDERLINE='\033[4m'
 BLINK='\x1b[5m'
 
 clear
+termux-setup-storage
 #--------MAIN MENU FUNCTIONS--------#
 
 function main-menu() {
