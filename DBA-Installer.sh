@@ -73,6 +73,11 @@ sleep 3
 wget https://raw.githubusercontent.com/Retro-Devils/Devils-Box-Android/main/test.txt ~/Test/
 
 if [ -f "~/Test/test.sh" ]; then
+        echo -e "------------------------------------"
+	echo -e "${GREEN}PACKAGES INSTALLED SUCCESSFULLY${NONE}"
+	echo -e "------------------------------------"
+	sleep 4
+else
         echo "### Termux Mirrors down"
 	echo -e "${RED}ERROR${NONE}"
 	echo -e "It seems Termux repositories are down. Let's fix it"
@@ -82,14 +87,6 @@ if [ -f "~/Test/test.sh" ]; then
 	termux-change-repo
 	pkg update -y -F &>> ~/storage/shared/pegasus_installer_log.log && pkg upgrade -y -F
 	pkg install git wget jq rsync unzip whiptail binutils build-essential liblz4 libuv ninja -y
-else
-        echo -e "------------------------------------"
-	echo -e "${GREEN}PACKAGES INSTALLED SUCCESSFULLY${NONE}"
-	echo -e "------------------------------------"
-	sleep 4
-	
-	
-
 fi
 
 echo -e "----------------------------------------------"
