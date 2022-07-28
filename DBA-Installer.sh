@@ -51,6 +51,8 @@ echo -e "----------------------------------------------"
 echo -e "${GREEN}----------------HOW TO USE--------------------${NONE}"
 echo -e "----------------------------------------------"
 echo -e "${GREEN}----OPEN TERMUX TYPE bash ~/Devils-Box.sh-----${NONE}"
+sleep 8
+main-menu
 fi
 
 if [[ $selected_option == "2" ]]
