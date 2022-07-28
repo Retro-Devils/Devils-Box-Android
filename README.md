@@ -23,7 +23,8 @@
 
 # Previews
 
-![Screenshot_20220726-204359_Termux](https://user-images.githubusercontent.com/88673522/181136422-306b2f2a-4029-4c74-9c73-f85f4f6e394e.jpg)
+![Screenshot_2022 07 28_06 42 39 501](https://user-images.githubusercontent.com/88673522/181580425-1b9564aa-b7e7-4c07-bc39-8ebc75345cc4.png)
+
 
 # Last Update 
 
