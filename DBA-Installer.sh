@@ -26,8 +26,7 @@ while true; do
 		[1]* ) break;;
 		[2]* ) break;;
 		[3]* ) break;;
-		
-		
+		* ) echo "Select a option";;
 	esac
  done
 }
