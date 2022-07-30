@@ -26,6 +26,8 @@ while true; do
 		[1]* ) break;;
 		[2]* ) break;;
 		[3]* ) break;;
+		
+		
 	esac
  done
 }
