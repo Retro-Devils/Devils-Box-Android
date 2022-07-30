@@ -13,7 +13,6 @@ BOLD='\033[1m'
 UNDERLINE='\033[4m'
 BLINK='\x1b[5m'
 
-clear
 #--------MAIN MENU FUNCTIONS--------#
 
 function main-menu() {
