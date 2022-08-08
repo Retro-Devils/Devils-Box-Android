@@ -262,6 +262,11 @@ wget "${HOST1}"/Retro-Devils-Megadrive.7z ~/Roms/
 unzip ~/Roms/Retro-Devils-Megadrive.7z
 rm ~/Roms/Retro-Devils-Megadrive.7z
 clear
+if [ -d ~/Roms/megadrive ]; then
+download-complete
+else
+download-error
+fi
 fi
 
 if [[ $selected_option == "C6" ]]
