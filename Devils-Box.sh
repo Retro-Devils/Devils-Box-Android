@@ -266,12 +266,28 @@ fi
 
 if [[ $selected_option == "C6" ]]
 then
- echo
+wget "${HOST1}"/Retro-Devils-NES.7z ~/Roms/
+unzip ~/Roms/Retro-Devils-NES.7z
+rm ~/Roms/Retro-Devils-NES.7z
+clear
+if [ -d ~/Roms/nes ]; then
+download-complete
+else
+download-error
+fi
 fi
 
 if [[ $selected_option == "C7" ]]
 then
- echo
+wget "${HOST1}"/Retro-Devils-SNES.7z ~/Roms/
+unzip ~/Roms/Retro-Devils-SNES.7z
+rm ~/Roms/Retro-Devils-SNES.7z
+clear
+if [ -d ~/Roms/snes ]; then
+download-complete
+else
+download-error
+fi
 fi
 
 if [[ $selected_option == "C8" ]]
